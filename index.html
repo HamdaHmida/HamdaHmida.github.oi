@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Engineer Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -29,17 +29,23 @@
     
     <section id="projects" class="container">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Project One</h3>
-            <p>Description of the first project. This project involved developing a machine learning model to predict stock prices.</p>
-            <a href="#">View on GitHub</a>
+        <button class="scroll-btn left">&lt;</button>
+        <div class="projects-wrapper">
+            <div class="project">
+                <h3>Project One</h3>
+                <img src="path-to-image1.jpg" alt="Screenshot of Project One">
+                <p>Description of the first project. This project involved developing a machine learning model to predict stock prices.</p>
+                <a href="#">View on GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Project Two</h3>
+                <img src="path-to-image2.jpg" alt="Screenshot of Project Two">
+                <p>Description of the second project. This project focused on creating a natural language processing tool for sentiment analysis.</p>
+                <a href="#">View on GitHub</a>
+            </div>
+            <!-- Add more projects as needed -->
         </div>
-        <div class="project">
-            <h3>Project Two</h3>
-            <p>Description of the second project. This project focused on creating a natural language processing tool for sentiment analysis.</p>
-            <a href="#">View on GitHub</a>
-        </div>
-        <!-- Add more projects as needed -->
+        <button class="scroll-btn right">&gt;</button>
     </section>
     
     <section id="skills" class="container">
@@ -71,5 +77,28 @@
             <p>&copy; 2024 John Doe. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollAmount = 300; // Adjust scroll amount as needed
+            const projectsWrapper = document.querySelector('.projects-wrapper');
+            const scrollLeftBtn = document.querySelector('.scroll-btn.left');
+            const scrollRightBtn = document.querySelector('.scroll-btn.right');
+
+            scrollLeftBtn.addEventListener('click', () => {
+                projectsWrapper.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            scrollRightBtn.addEventListener('click', () => {
+                projectsWrapper.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
