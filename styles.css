@@ -1,83 +1,216 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
+    background-color: rgb(227, 233, 255);
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
+    background: url('unnamed.jpg') right;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-}
-
 nav ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
 section {
-    padding: 20px 0;
-}
-
-h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-}
-
-.project, .skills ul, .contact ul {
-    margin: 20px 0;
-}
-
-.project h3 {
-    margin: 0;
-}
-
-footer {
-    background: #333;
-    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+}
+
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.projects-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.project {
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
 }
 
 .scroll-btn {
-    background-color: #333;
-    color: #fff;
+    background: none;
     border: none;
-    padding: 10px;
+    font-size: 2em;
     cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1000;
 }
 
-.scroll-btn.left {
-    left: 10px;
+#scroll-left {
+    left: 0;
 }
 
-.scroll-btn.right {
-    right: 10px;
+#scroll-right {
+    right: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* styles.css */
+
+/* Other existing styles */
+
+.university:nth-child(1) {
+    background: url('https://ept.tn/sites/default/files/im6.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.about-left,
+.about-right {
+    flex: 1;
+    margin: 10px;
+}
+
+.about-left p {
+    text-align: justify;
+    font-size: 25px; 
+}
+.about-left p {
+    opacity: 0; /* Initially hide the paragraph */
+    transition: opacity 2s ease; /* Transition for opacity change */
+}
+
+.about-left.show p {
+    opacity: 1; /* Show the paragraph when .show class is added */
+}
+
+.about-image {
+    flex: 0 0 auto;
+    margin: 10px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.contacts {
+    margin-top: 20px;
+}
+
+.contacts p {
+    margin: 5px 0;
+}
+
+.contacts a {
+    color: #0007cc;
+    text-decoration: none;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+}
+
+.university {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 80px;
+    
+}
+
+#experiences {
+    padding: 20px;
+}
+
+.experiences-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.experience {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff; /* Default background color */
+}
+
+.experience:nth-child(odd) {
+    background-color: rgb(255, 255, 255); /* Alternate background color for odd numbered experiences */
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.company-logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: row; /* Image on the right */
+    gap: 20px;
+}
+
+.experience-description ul {
+    list-style-type: disc;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.experience-image1 img {
+    max-width: 420px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.experience-image2 img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.experience-description {
+    flex: 1;
 }
